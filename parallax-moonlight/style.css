@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --clr-primary: #2b1055;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(var(--clr-primary), #7597de);
+  min-height: 100vh;
+  width: 100vw;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 25px;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  z-index: 1000;
+  display: none;
+}
+
+.menu .toggle {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  transition: all 300ms ease-in;
+}
+
+.menu .toggle::before,
+.menu .toggle::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+
+.menu .toggle::before {
+  top: -10px;
+}
+
+.menu .toggle::after {
+  top: 10px;
+}
+
+.menu:hover {
+  opacity: 0.7;
+}
+
+.menu.active .toggle::before,
+.menu.active .toggle::after {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.menu.active .toggle {
+  transform: rotate(-135deg);
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  font-size: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 999;
+}
+
+#logo a {
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header ul li {
+  margin-left: 30px;
+}
+
+header ul li a {
+  color: inherit;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background: #fff;
+  color: var(--clr-primary);
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+section img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+section img#moon {
+  mix-blend-mode: screen;
+}
+
+section #title {
+  position: absolute;
+  font-size: clamp(4rem, 6.4vw, 7rem);
+  white-space: nowrap;
+  z-index: 9;
+}
+
+section #btn {
+  position: absolute;
+  display: inline-block;
+  color: var(--clr-primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transform: translateY(100px);
+  z-index: 9;
+}
+
+section #btn:hover {
+  background: var(--clr-primary);
+  color: #fff;
+}
+
+section img#mountains_front {
+  z-index: 10;
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to top, var(--clr-primary), transparent);
+  z-index: 999;
+}
+
+.sec {
+  position: relative;
+  background: var(--clr-primary);
+  padding: 100px 50px 20px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.sec h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+}
+
+.sec p {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 750px) {
+  .menu {
+    display: flex;
+  }
+
+  #logo {
+    font-size: 1.75rem;
+  }
+
+  header {
+    padding: 22px 20px 0;
+  }
+
+  header ul {
+    display: none;
+  }
+
+  header.active ul {
+    display: none;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  header.active ul li {
+    margin: 0;
+    width: 100%;
+  }
+
+  header.active ul li a {
+    display: block;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  header ul li a:hover,
+  header ul li a.active {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--clr-primary);
+  }
+}
