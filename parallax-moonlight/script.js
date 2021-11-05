@@ -10,12 +10,11 @@ window.addEventListener("scroll", () => {
   const value = window.scrollY;
 
   stars.style.left = 0.4 * value + "px";
-  moon.style.top = 1.2 * value + "px";
+  moon.style.top = 1.5 * value + "px";
   title.style.marginTop = 2.2 * value + "px";
-  title.style.marginRight = 1.2 * value + "px";
   btn.style.marginTop = 2.2 * value + "px";
-  mountains_behind.style.top = 0.4 * value + "px";
-  header.style.top = 0.65 * value + "px";
+  mountains_behind.style.top = 0.3 * value + "px";
+  header.style.top = 0.35 * value + "px";
 });
 
 menu.addEventListener("click", () => {
