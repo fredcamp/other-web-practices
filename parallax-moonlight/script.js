@@ -10,8 +10,8 @@ window.addEventListener("scroll", () => {
   const value = window.scrollY;
 
   stars.style.left = 0.4 * value + "px";
-  moon.style.top = 1.5 * value + "px";
-  title.style.marginTop = 2.2 * value + "px";
+  moon.style.top = 1.9 * value + "px";
+  title.style.marginTop = 2.3 * value + "px";
   btn.style.marginTop = 2.2 * value + "px";
   mountains_behind.style.top = 0.3 * value + "px";
   header.style.top = 0.35 * value + "px";
