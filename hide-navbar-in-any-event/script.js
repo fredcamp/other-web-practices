@@ -1,15 +1,14 @@
 const nav = document.querySelector("nav");
-let previousPosY = window.pageYOffset;
 const navSize = nav.getBoundingClientRect()["height"];
 const section = document.querySelector("section");
-
 const subMenuList = document.querySelectorAll(".nav-menu-list");
 const subMenu = document.querySelectorAll(".sub-menu");
+const dropDowns = document.querySelectorAll(".nav-menu-list > a");
+let previousPosY = window.pageYOffset;
 
 section.style.marginTop = `${navSize}px`;
 
 window.addEventListener("scroll", (e) => {
-  const dropDowns = document.querySelectorAll(".nav-menu-list > a");
   dropDowns.forEach((item) => {
     if (item.classList.contains("active")) {
       item.classList.remove("active");
@@ -28,9 +27,8 @@ window.addEventListener("scroll", (e) => {
 
 subMenuList.forEach((item, index) => {
   item.addEventListener("click", (e) => {
-    const dropDowns = document.querySelectorAll(".nav-menu-list > a");
     dropDowns.forEach((item, index2) => {
-      if (item.classList.contains("active") && index != index2) {
+      if (item.classList.contains("active") && index !== index2) {
         item.classList.remove("active");
       }
     });
@@ -40,7 +38,6 @@ subMenuList.forEach((item, index) => {
 
 window.addEventListener("click", (e) => {
   if (!e.target.matches(".nav-menu-list > a")) {
-    const dropDowns = document.querySelectorAll(".nav-menu-list > a");
     dropDowns.forEach((item) => {
       if (item.classList.contains("active")) {
         item.classList.remove("active");
@@ -48,16 +45,3 @@ window.addEventListener("click", (e) => {
     });
   }
 });
-
-// subMenuList.forEach((subMenus, index) => {
-//   let index1 = index;
-//   let index2 = 0;
-
-//   subMenus.addEventListener("click", (e) => {
-//     subMenu.forEach((item, itemIndex) => {
-//       index2 = itemIndex;
-//       if (index2 != index1) item.classList.remove("active");
-//     });
-//     subMenu[index1].classList.toggle("active");
-//   });
-// });
