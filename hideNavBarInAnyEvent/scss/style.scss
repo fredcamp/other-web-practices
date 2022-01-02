@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 200vh;
+}
+
+header {
+  min-height: 100vh;
+  background: #888 url("https://source.unsplash.com/category/crypto") no-repeat
+    center center/cover;
+}
+
+nav {
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 300ms;
+
+  .logo {
+    color: #fff;
+    padding-inline: 1em;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+
+    li {
+      flex: 1;
+    }
+
+    a {
+      text-align: center;
+      color: #b1b1b1;
+      display: block;
+      text-decoration: none;
+      padding: 1em;
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+      transition: border 300ms;
+
+      &:hover {
+        color: #fff;
+        border-bottom: 3px solid #fff;
+      }
+    }
+  }
+
+  li.nav-menu-list {
+    position: relative;
+
+    .sub-menu {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #111;
+      height: 0;
+
+      overflow: hidden;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.9);
+      transition: height 300ms;
+
+      a {
+        border: none;
+        text-align: left;
+        padding-inline: 2em;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    a {
+      border: none;
+    }
+
+    &#home .sub-menu.active {
+      height: 150px;
+    }
+    &#services .sub-menu.active {
+      height: 250px;
+    }
+  }
+}
+
+section {
+  padding: 2em;
+  font-size: 1.5rem;
+
+  > * + * {
+    padding-top: 1em;
+  }
+}
