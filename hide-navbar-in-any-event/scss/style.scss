@@ -80,7 +80,6 @@ nav {
       a {
         border: none;
         text-align: left;
-        padding-inline: 2em;
 
         &:hover {
           color: #fff;
@@ -92,10 +91,10 @@ nav {
       border: none;
     }
 
-    &#home .sub-menu.active {
+    a#home.active ~ .sub-menu {
       height: 150px;
     }
-    &#services .sub-menu.active {
+    a#services.active ~ .sub-menu {
       height: 250px;
     }
   }

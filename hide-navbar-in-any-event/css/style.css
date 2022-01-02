@@ -99,7 +99,6 @@ nav li.nav-menu-list .sub-menu {
 nav li.nav-menu-list .sub-menu a {
   border: none;
   text-align: left;
-  padding-inline: 2em;
 }
 
 nav li.nav-menu-list .sub-menu a:hover {
@@ -110,11 +109,11 @@ nav li.nav-menu-list a {
   border: none;
 }
 
-nav li.nav-menu-list#home .sub-menu.active {
+nav li.nav-menu-list a#home.active ~ .sub-menu {
   height: 150px;
 }
 
-nav li.nav-menu-list#services .sub-menu.active {
+nav li.nav-menu-list a#services.active ~ .sub-menu {
   height: 250px;
 }
 
