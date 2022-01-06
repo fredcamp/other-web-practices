@@ -1,6 +1,7 @@
 const dropButtons = document.querySelectorAll(".dropbtn");
 const dropDowns = document.querySelectorAll(".dropdowns");
 const toggler = document.querySelector(".toggle");
+let togglerBool = false;
 const nav = document.querySelector("nav");
 const navbar = document.querySelector(".navbar-container");
 const navbarHeight = nav.getBoundingClientRect()["height"];
@@ -32,6 +33,14 @@ window.addEventListener("scroll", (e) => {
 toggler.addEventListener("click", (e) => {
   navbar.classList.toggle("active");
   main.classList.toggle("active");
+
+  if (togglerBool === false) {
+    togglerBool = true;
+    toggler.firstChild.classList.replace("fa-bars", "fa-close");
+  } else {
+    togglerBool = false;
+    toggler.firstChild.classList.replace("fa-close", "fa-bars");
+  }
 });
 
 dropButtons.forEach((button, buttonIndex) => {

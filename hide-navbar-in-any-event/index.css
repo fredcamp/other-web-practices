@@ -70,6 +70,7 @@ ul {
 .dropbtn {
   background: none;
   border: none;
+  z-index: 99;
 }
 
 .dropbtn.active i {
@@ -86,12 +87,25 @@ ul {
 
 .mega-dropdown {
   position: absolute;
+  top: 55px;
   background-color: #111;
   color: #818181;
   padding: 1em 1.5em;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   width: max-content;
   display: none;
+}
+
+.mega-dropdown::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  aspect-ratio: 1;
+  background: #111;
+  transform: translate(15px, -5px) rotate(45deg);
+  z-index: -1;
 }
 
 .mega-dropdown a {
@@ -203,8 +217,10 @@ main p {
 
   .mega-dropdown {
     position: relative;
+    top: 0;
     padding: 0.5em 0.5em 0.5em 1em;
     box-shadow: none;
+    overflow: hidden;
   }
 
   .mega-dropdown h1 {
@@ -236,7 +252,7 @@ main p {
 
   main {
     margin-top: 0;
-    transition: margin 300ms;
+    transition: margin-left 300ms;
   }
 
   main.active {
