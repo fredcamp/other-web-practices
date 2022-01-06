@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -16,93 +16,88 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <nav>
-      <h1 class="logo" id="logo">Logo</h1>
-      <ul class="nav-menu">
-        <li class="nav-menu-list">
-          <a href="#!" id="home"><i class="fa fa-fw fa-home"></i> Home</a>
+    <nav class="navbar">
+      <ul class="navbar-container">
+        <li><a href="#" class="navlink">Services</a></li>
+        <li class="dropdown-container">
+          <button class="navlink dropbtn">
+            Dropdown 1 <i class="fa fa-caret-down"></i>
+          </button>
 
-          <ul class="sub-menu">
-            <li><a href="#logo">Home 1</a></li>
-            <li><a href="#logo">Home 2</a></li>
-            <li><a href="#logo">Home 3</a></li>
+          <div class="mega-dropdown dropdowns">
+            <div class="category-container">
+              <h1>Mega Menu</h1>
+              <div class="category">
+                <h2>Category 1</h2>
+                <ul>
+                  <li><a href="#">Link 1</a></li>
+                  <li><a href="#">Link 2</a></li>
+                  <li><a href="#">Link 3</a></li>
+                </ul>
+              </div>
+              <div class="category">
+                <h2>Category 2</h2>
+                <ul>
+                  <li><a href="#">Link 1</a></li>
+                  <li><a href="#">Link 2</a></li>
+                  <li><a href="#">Link 3</a></li>
+                </ul>
+              </div>
+              <div class="category">
+                <h2>Category 3</h2>
+                <ul>
+                  <li><a href="#">Link 1</a></li>
+                  <li><a href="#">Link 2</a></li>
+                  <li><a href="#">Link 3</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#" class="navlink">Contact</a></li>
+        <li class="dropdown-container">
+          <button class="navlink dropbtn">
+            Dropdown 2 <i class="fa fa-caret-down"></i>
+          </button>
+
+          <ul class="dropdown dropdowns">
+            <li><a href="#" class="navlink">Link 1</a></li>
+            <li><a href="#" class="navlink">Link 2</a></li>
+            <li><a href="#" class="navlink">Link 3</a></li>
           </ul>
         </li>
-        <li class="nav-menu-list">
-          <a href="#!" id="services"
-            ><i class="fa fa-fw fa-wrench"></i> Services</a
-          >
-
-          <ul class="sub-menu">
-            <li><a href="#">Home 1</a></li>
-            <li><a href="#">Home 2</a></li>
-            <li><a href="#">Home 3</a></li>
-            <li><a href="#">Home 2</a></li>
-            <li><a href="#">Home 3</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#"><i class="fa fa-fw fa-user"></i> Clients</a>
-        </li>
-        <li>
-          <a href="#" id="contact"
-            ><i class="fa fa-fw fa-envelope"></i> Contact</a
-          >
-        </li>
+        <li><a href="#" class="navlink">Search</a></li>
       </ul>
+
+      <button class="toggle"><i class="fa fa-fw fa-bars"></i></button>
     </nav>
-    <header></header>
 
-    <section>
-      <h1>Sidebar with Icons &equiv; &#9776; &#8801;</h1>
+    <main>
+      <h1>Responsive Navbar and Dropdown</h1>
 
+      <p>Single dropdown can be clicked at a time</p>
+      <p>Clicking other element and scrolling removes dropdown</p>
+      <p>Some other text.....</p>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae dolore,
-        quas voluptatibus enim maxime id quaerat ratione, alias distinctio
-        assumenda illo ab iusto magni. Doloribus praesentium vero qui unde
-        asperiores nam sapiente atque obcaecati quas quia neque natus tenetur
-        voluptatibus ipsa at id esse dolorum ea, numquam dicta itaque. Dicta.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium
+        illum deleniti iusto quaerat! Reiciendis quis quod at similique? Quasi
+        error nam velit! Sapiente voluptas impedit voluptatum. Asperiores
+        laborum dolor vero possimus deleniti nesciunt, aut quisquam temporibus
+        fuga, modi doloremque perferendis.
       </p>
-
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae dolore,
-        quas voluptatibus enim maxime id quaerat ratione, alias distinctio
-        assumenda illo ab iusto magni. Doloribus praesentium vero qui unde
-        asperiores nam sapiente atque obcaecati quas quia neque natus tenetur
-        voluptatibus ipsa at id esse dolorum ea, numquam dicta itaque. Dicta.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit corporis
+        possimus quaerat dolor veniam reiciendis maxime maiores non. Dolore
+        molestiae, aut consequatur odit debitis aperiam modi ipsa, atque minus
+        asperiores rem id! Totam nulla facilis libero, laudantium itaque
+        adipisci voluptatum cumque labore. Tenetur maxime iusto provident
+        accusantium voluptatum, modi dolores repellat est harum quo magnam
+        facilis ducimus perferendis ipsam laboriosam neque fugit blanditiis eos
+        voluptatibus eveniet, quia accusamus vero aperiam enim! Facere officiis
+        cum delectus error tempore quibusdam ipsum soluta rem aliquid deleniti
+        numquam, voluptate neque molestiae fugiat cumque nihil in alias nesciunt
+        nam? Dignissimos aut possimus ducimus accusantium beatae?
       </p>
-
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae dolore,
-        quas voluptatibus enim maxime id quaerat ratione, alias distinctio
-        assumenda illo ab iusto magni. Doloribus praesentium vero qui unde
-        asperiores nam sapiente atque obcaecati quas quia neque natus tenetur
-        voluptatibus ipsa at id esse dolorum ea, numquam dicta itaque. Dicta.
-      </p>
-
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae dolore,
-        quas voluptatibus enim maxime id quaerat ratione, alias distinctio
-        assumenda illo ab iusto magni. Doloribus praesentium vero qui unde
-        asperiores nam sapiente atque obcaecati quas quia neque natus tenetur
-        voluptatibus ipsa at id esse dolorum ea, numquam dicta itaque. Dicta.
-      </p>
-
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae dolore,
-        quas voluptatibus enim maxime id quaerat ratione, alias distinctio
-        assumenda illo ab iusto magni. Doloribus praesentium vero qui unde
-        asperiores nam sapiente atque obcaecati quas quia neque natus tenetur
-        voluptatibus ipsa at id esse dolorum ea, numquam dicta itaque. Dicta.
-      </p>
-
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae dolore,
-        quas voluptatibus enim maxime id quaerat ratione, alias distinctio
-        assumenda illo ab iusto magni. Doloribus praesentium vero qui unde
-        asperiores nam sapiente atque obcaecati quas quia neque natus tenetur
-        voluptatibus ipsa at id esse dolorum ea, numquam dicta itaque. Dicta.
-      </p>
-    </section>
+    </main>
   </body>
 </html>
