@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Tahoma, serif;
+}
+
+.header {
+  position: relative;
+  background: red;
+  max-width: 750px;
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+
+  .btn {
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.45em;
+
+    i {
+      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+    &:hover {
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .slideshow {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all 300ms;
+  }
+
+  .btn-left {
+    left: 0;
+    border-radius: 0 0.5em 0.5em 0;
+  }
+
+  .btn-right {
+    right: 0;
+    border-radius: 0.5em 0 0 0.5em;
+  }
+
+  .dots {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 3px;
+
+    .dot {
+      cursor: pointer;
+      background: none;
+      color: #fff;
+      border: none;
+      font-size: 0.825rem;
+      padding: 0 1px;
+
+      i {
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      }
+
+      &:hover,
+      &.active {
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  transition: all 300ms;
+
+  &__img {
+    width: 100%;
+    max-width: 750px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__text {
+    position: absolute;
+    top: 5px;
+    left: 1rem;
+  }
+
+  &__caption {
+    position: absolute;
+    bottom: 1.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  &.active {
+    display: block;
+  }
+}

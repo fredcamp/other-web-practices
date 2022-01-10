@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Tahoma, serif;
+  position: relative;
+}
+
+.social-bar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  width: max-content;
+  height: max-content;
+}
+
+.social-bar a {
+  color: #fff;
+  padding: 0.5em;
+  display: block;
+  font-size: 1.25rem;
+}
+
+.social-bar li:first-child {
+  background-color: rgb(88, 88, 255);
+}
+
+.social-bar li:nth-child(2) {
+  background-color: rgb(92, 181, 255);
+}
+
+.social-bar li:nth-child(3) {
+  background-color: rgb(255, 152, 92);
+}
+
+.social-bar li:nth-child(4) {
+  background-color: rgb(25, 152, 255);
+}
+
+.social-bar li:nth-child(5) {
+  background-color: rgb(255, 52, 52);
+}
+
+main {
+  margin: 2em 4em;
+  line-height: 1.7;
+}
+
+main p {
+  text-align: justify;
+}
