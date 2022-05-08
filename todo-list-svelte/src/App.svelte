@@ -1,6 +1,7 @@
 <script>
   import { crossfade } from "svelte/transition";
   import { quintOut } from "svelte/easing";
+  import { flip } from "svelte/animate";
 
   const [send, receive] = crossfade({
     duration: (d) => Math.sqrt(d * 200),
@@ -68,6 +69,7 @@
         class="block bg-slate-800 text-slate-200 rounded shadow-highlight p-2 my-2 relative group hover:bg-slate-800/90"
         in:receive={{ key: todo.id }}
         out:send={{ key: todo.id }}
+        animate:flip={{duration: 200}}
       >
         <input
           type="checkbox"
@@ -76,7 +78,7 @@
         />
         <span>{todo.text}</span>
         <button
-          class="bg-slate-700 text-[10px] text-white rounded-full w-5 h-5 absolute top-1/2 right-2 -translate-y-1/2 group-hover:flex justify-center items-center hidden hover:bg-slate-600"
+          class="bg-slate-500 text-[10px] text-white rounded-full w-5 h-5 absolute top-1/2 right-2 -translate-y-1/2 group-hover:flex justify-center items-center hidden hover:bg-slate-600"
           on:click={remove(todo)}>🗑️</button
         >
       </label>
@@ -87,9 +89,10 @@
     <h2 class="text-4xl text-slate-200 font-light mb-4">done</h2>
     {#each todos.filter((t) => t.done) as todo (todo.id)}
       <label
-        class="block bg-slate-800 text-slate-200 rounded shadow-highlight p-2 my-2 relative group hover:bg-slate-800/90"
+        class="block bg-slate-700 text-slate-200 rounded shadow-highlight p-2 my-2 relative group hover:bg-slate-700/90"
         in:receive={{ key: todo.id }}
         out:send={{ key: todo.id }}
+        animate:flip={{duration: 200}}
       >
         <input
           type="checkbox"
@@ -99,7 +102,7 @@
         />
         <span>{todo.text}</span>
         <button
-          class="bg-slate-700 text-[10px] text-white rounded-full w-5 h-5 absolute top-1/2 right-2 -translate-y-1/2 group-hover:flex justify-center items-center hidden hover:bg-slate-600"
+          class="bg-slate-500 text-[10px] text-white rounded-full w-5 h-5 absolute top-1/2 right-2 -translate-y-1/2 group-hover:flex justify-center items-center hidden hover:bg-slate-600"
           on:click={remove(todo)}>🗑️</button
         >
       </label>
