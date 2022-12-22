@@ -1,4 +1,4 @@
-# Website Practices
+# Web Practices
 
 Web app creations, mock-ups, clones, and other stuff for practice purposes
 - [Parallax Moonlight](/parallax-moonlight)
